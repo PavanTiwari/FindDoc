@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".DocDetail" 
+    android:background="@color/background">
+       <TextView
+            android:id="@+id/textFname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/First_Name"
+            android:textAppearance="@style/LabelText" />
+        <TextView
+            android:id="@+id/textLname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/textFname"
+            android:text="@string/Last_Name"
+            android:textAppearance="@style/LabelText" />
+
+        <TextView
+            android:id="@+id/FnameValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textLname"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/textFname"
+            android:text="@string/First_Name"
+            android:textAppearance="@style/CustomText" />
+
+         <TextView
+             android:id="@+id/LnameValue"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignLeft="@id/FnameValue"
+             android:layout_alignTop="@id/textLname"
+             android:layout_below="@+id/FnameValue"
+             android:layout_toRightOf="@id/textLname"
+             android:text="@string/Last_Name"
+             android:textAppearance="@style/CustomText" />
+
+         <TextView
+             android:id="@+id/txtStreet"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_below="@+id/textLname"
+             android:text="@string/Street_Name"
+            android:textAppearance="@style/LabelText" />
+
+         <TextView
+             android:id="@+id/txtStreetVal"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignLeft="@+id/LnameValue"
+             android:layout_below="@+id/LnameValue"
+             android:text="@string/Street_Name"
+             android:textAppearance="@style/CustomText" />
+
+         <TextView
+             android:id="@+id/txtCityVal"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignLeft="@+id/txtStreetVal"
+             android:layout_below="@+id/txtStreetVal"
+             android:text="@string/City_Name"
+             android:textAppearance="@style/CustomText" />
+
+         <TextView
+             android:id="@+id/txtCity"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignBottom="@+id/txtCityVal"
+             android:layout_alignLeft="@+id/txtStreet"
+             android:text="@string/City_Name"
+            android:textAppearance="@style/LabelText" />
+          <TextView
+             android:id="@+id/txtSplVal"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignLeft="@+id/txtCityVal"
+             android:layout_below="@+id/txtCityVal"
+             android:text="@string/Speciality"
+             android:textAppearance="@style/CustomText" />
+
+         <TextView
+             android:id="@+id/txtSpl"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignBottom="@+id/txtSplVal"
+             android:layout_alignLeft="@+id/txtCity"
+             android:text="@string/Speciality"
+            android:textAppearance="@style/LabelText" />
+    <TextView
+             android:id="@+id/txtHplVal"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignLeft="@+id/txtSplVal"
+             android:layout_below="@+id/txtSplVal"
+             android:text="@string/Hospital_Name"
+             android:textAppearance="@style/CustomText" />
+
+         <TextView
+             android:id="@+id/txtHpl"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignBottom="@+id/txtHplVal"
+             android:layout_alignLeft="@+id/txtSpl"
+             android:text="@string/Hospital_Name"
+            android:textAppearance="@style/LabelText" />
+    <TextView
+             android:id="@+id/txtTimVal"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignLeft="@+id/txtHplVal"
+             android:layout_below="@+id/txtHplVal"
+             android:text="@string/Working_Hr"
+             android:textAppearance="@style/CustomText" />
+
+         <TextView
+             android:id="@+id/txtTiming"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignLeft="@+id/txtHpl"
+             android:layout_below="@+id/txtHplVal"
+             android:text="@string/Working_Hr"
+            android:textAppearance="@style/LabelText" />
+    <TextView
+             android:id="@+id/txtContactVal"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignLeft="@+id/txtTimVal"
+             android:layout_below="@+id/txtTimVal"
+             android:text="@string/Contact_No"
+             android:textAppearance="@style/CustomText" />
+
+         <TextView
+             android:id="@+id/txtContact"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignLeft="@+id/txtTiming"
+             android:layout_below="@+id/txtTimVal"
+             android:text="@string/Contact_No"
+            android:textAppearance="@style/LabelText" />         
+</RelativeLayout>

@@ -1,0 +1,131 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context=".FullscreenActivity" >
+
+    <!--
+         The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc.
+    -->
+
+    <TextView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:text="@string/doc_content"
+        android:textColor="#33b5e5"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <!--
+         This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows.
+    -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true" >
+<RelativeLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent">
+
+	    <EditText
+	        android:id="@+id/Zipcode"
+	        android:singleLine="true"
+	        android:imeOptions="actionDone"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textSize="19sp"
+	        android:hint="@string/zipcode"
+	        android:ems="10"
+	        android:background="@color/white"
+	        android:paddingTop="20dp"
+	        android:paddingBottom="20dp"
+	        android:paddingLeft="55dp">
+	    </EditText>
+		<Button
+		    android:id="@+id/searchDoc"
+		    android:layout_width="35dp"
+		    android:layout_height="35dp"
+		    android:layout_centerVertical="true"
+	        android:layout_alignParentRight="true"
+		    android:background="@android:drawable/ic_menu_search"
+		    android:onClick="displayDoc"
+		    android:layout_marginLeft="10dp">
+		</Button>
+
+	</RelativeLayout>        
+<!--         <RelativeLayout -->
+<!--             android:gravity="left" -->
+<!--             android:layout_gravity="top" -->
+<!--             android:layout_width="match_parent" -->
+<!--             android:layout_height="wrap_content" > -->
+
+<!--          <SearchView -->
+<!--              android:id="@+id/itemList" -->
+<!--              android:layout_width="match_parent" -->
+<!--              android:layout_height="wrap_content" -->
+<!--              android:dividerPadding="@android:dimen/notification_large_icon_height" -->
+<!--              android:queryHint="Search City, State or Zip" > -->
+
+<!--         </SearchView> -->
+    
+<!--          </RelativeLayout>         -->
+        <RelativeLayout
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        <Button
+                android:id="@+id/findDoc_button"
+                android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:background="@drawable/mainbutton"
+			    android:text="@string/main_button"
+			    android:onClick="displayDoc" />
+         </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent" >
+            <Button
+                android:id="@+id/doc_button"
+                style="?buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/doc_button" 
+                android:onClick="displayDoc"/>
+             <Button
+                android:id="@+id/hos_button"
+                style="?buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/hos_button" 
+                android:onClick="displayHospital"/>
+              <Button
+                android:id="@+id/spec_button"
+                style="?buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/spec_button"
+                android:onClick="displaySpec" />
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</FrameLayout>
